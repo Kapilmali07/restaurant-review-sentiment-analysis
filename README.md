@@ -75,44 +75,6 @@ for the full write-up: methodology, ROC curves, confusion matrices, and error an
     └── misclassified_examples.csv
 ```
 
-## Setup
-
-```bash
-git clone https://github.com/<your-username>/restaurant-review-sentiment-analysis.git
-cd restaurant-review-sentiment-analysis
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-> On Google Colab, replace `tensorflow-cpu` in `requirements.txt` with `tensorflow`
-> (Colab ships a GPU build already) — or just skip installing TensorFlow, it's
-> preinstalled there.
-
-## Usage
-
-**Run the full notebook** (reproduces every model, figure, and metric from scratch):
-
-```bash
-jupyter notebook Restaurant_Review_Sentiment_Analysis.ipynb
-```
-
-**Or use the trained models directly** without re-running training:
-
-```bash
-python predict.py "The food was absolutely amazing, will come back!"
-python predict.py "Service was slow and the pasta was cold." --model "Linear SVM"
-```
-
-```json
-{
-  "review": "The food was absolutely amazing, will come back!",
-  "model_used": "Logistic Regression",
-  "label": "Positive",
-  "confidence": 0.9585
-}
-```
-
 ## Methodology summary
 
 1. Load data, drop duplicates, exploratory analysis (class balance, review length)
@@ -137,10 +99,6 @@ python predict.py "Service was slow and the pasta was cold." --model "Linear SVM
 - Collect more real labeled reviews to reduce reliance on synthetic augmentation
 - Per-model decision-threshold tuning via validation precision-recall curves
 - Aspect-based sentiment analysis (separate food quality from service quality)
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Author
 
