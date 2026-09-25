@@ -29,7 +29,7 @@ curve, confusion matrix, and a discussion of the results.
 ```
 .
 ├── Restaurant_Rev.ipynb                  # Full notebook: preprocessing, model, training, evaluation
-├── Restaurant_Reviews.csv                # Dataset (1,000 labeled restaurant reviews)
+├── Restaurant_Reviews.csv                # Dataset
 ├── reports/
 │   └── Restaurant_Review_Project_Report.pdf
 ├── requirements.txt
@@ -39,7 +39,7 @@ curve, confusion matrix, and a discussion of the results.
 
 ## Dataset
 
-1,000 restaurant reviews labeled `1` (liked) or `0` (not liked), balanced 500/500.
+Restaurant reviews labeled `1` (liked) or `0` (not liked), balanced 500/500.
 
 ## Methodology
 
@@ -55,33 +55,6 @@ curve, confusion matrix, and a discussion of the results.
 6. **Evaluation** — accuracy, classification report, and confusion matrix on the
    held-out test set
 
-## Setup
-
-```bash
-git clone https://github.com/<your-username>/restaurant-review-sentiment-analysis.git
-cd restaurant-review-sentiment-analysis
-python -m venv venv
-source venv/bin/activate        # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
-
-> On Google Colab, `tensorflow`/`keras` are preinstalled — you can skip installing
-> them and just run the notebook directly.
-
-## Usage
-
-Open and run `Restaurant_Rev.ipynb` top to bottom (Jupyter or Google Colab). The
-notebook reads `Restaurant_Reviews.csv`, trains the model, evaluates it, and ends
-with an interactive `predict_sentiment()` function you can use to test your own
-review text.
-
-> Note: this repo does not include a pre-trained model file. Running the notebook
-> will save one locally (`SentimentModel.keras`) — add it here yourself if you'd
-> like to version it, or keep it out of the repo (see `.gitignore`).
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ## Author
 
